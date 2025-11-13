@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+    background-color: #262626;
+    color: #D9D9D9;
+    padding: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+header > h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #F9F4DA;
+}
+
+header > p {
+    font-size: 0.875rem;
+    max-width: 350px;
+    color: #8E8E8E;
+}
+
+section.status {
+    background-color: #10A95B;
+    color: #F9F4DA;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 360px;
+}
+
+section.status > p {
+    text-align: center;
+    margin: 5px;
+}
+
+section.status > h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 5px
+}
+
+.languages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 360px;
+    gap: 5px;
+}
+
+.lang{
+    border: none;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-weight: 600;
+}
+
+.word{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.letter{
+    text-align: center;
+    padding-top: 8px;
+    height: 40px;
+    width: 40px;
+    border-bottom: 1px solid #F9F4DA;
+    background-color: #323232;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.keyboard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 480px;
+}
+
+.keyboard-btn{
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    border: 1px solid #D7D7D7;
+    background-color: #FCBA29;
+    color: #1E1E1E;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.new-game {
+    margin-top: 20px;
+    background-color: #11B5E5;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    width: 225px;
+    height: 40px;
+    padding: 6px 12px;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+}
