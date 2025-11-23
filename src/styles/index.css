@@ -13,7 +13,6 @@ body {
 main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100%;
 }
@@ -34,13 +33,13 @@ header > p {
     color: #8E8E8E;
 }
 
-section.status {
-    background-color: #10A95B;
-    color: #F9F4DA;
+section.status{
     border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 25px;
     width: 360px;
+    color: #F9F4DA;
+    min-height: 60px;
 }
 
 section.status > p {
@@ -54,6 +53,25 @@ section.status > h2 {
     margin: 5px
 }
 
+section.wrongGuess {
+    background-color: #7A5EA7;
+    border: 1px dashed #323232;
+    font-style: italic;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.gamewon {
+    background-color: #10A95B;
+    
+}
+
+section.gamelost {
+    background-color: #BA2A2A;
+}
+
 .languages{
     display: flex;
     flex-wrap: wrap;
@@ -62,11 +80,27 @@ section.status > h2 {
     gap: 5px;
 }
 
-.lang{
+span.lang {
     border: none;
     border-radius: 3px;
-    padding: 5px 5px;
-    font-weight: 600;
+    padding: 4.5px;
+    position: relative;
+}
+
+span.lang.lost::before {
+    border: none;
+    border-radius: 3px;
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .word{
@@ -80,12 +114,16 @@ section.status > h2 {
 .letter{
     text-align: center;
     padding-top: 8px;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-bottom: 1px solid #F9F4DA;
     background-color: #323232;
     font-weight: 700;
     font-size: 1.125rem;
+}
+
+span.missingletter{
+    color: #EC5D49;
 }
 
 .keyboard{
@@ -96,7 +134,7 @@ section.status > h2 {
     max-width: 480px;
 }
 
-.keyboard-btn{
+section.keyboard > button{
     height: 35px;
     width: 35px;
     border-radius: 3px;
@@ -106,6 +144,19 @@ section.status > h2 {
     font-family: inherit;
     font-weight: 600;
     cursor: pointer;
+}
+
+section.keyboard > button.correct {
+    background-color: #10A95B;
+}
+
+section.keyboard > button.wrong {
+    background-color: #EC5D49;
+}
+
+section.keyboard > button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5
 }
 
 .new-game {
